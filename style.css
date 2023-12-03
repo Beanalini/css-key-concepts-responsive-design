@@ -4,7 +4,12 @@
   --light: #e7ecef;
   --dark: #272932;
   --camel: #d8a47f;
+  --burnt-camel: #744d25;
+  --burnt-cam: #4d2600;
   --black: #000;
+  --dark-moss: #1f1f14;
+  --moss: #3d3d29;
+  --dark-green: #003300;
 }
 
 body {
@@ -14,16 +19,21 @@ body {
   align-items: center;
 }
 
-.title {
+h1 {
   font-size: 2.25rem;
 }
-.sub-heading {
+
+h2 {
   font-size: 1.875rem;
 }
 
-.intro {
+p {
+  font-size: 1rem;
+}
+
+.intro-text {
   width: 80%;
-  font-size: 1.125 rem;
+  display: none;
 }
 
 .card-container {
@@ -43,20 +53,18 @@ body {
   box-shadow: 5px 10px 20px #000;
   border: 2px solid var(--black);
   border-radius: 20px;
-  max-width: 16rem;
+  max-width: 18rem;
   width: 100%;
   padding: 10px;
   margin: 10px;
 }
 
 .cat-name {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
-.species,
-.fav-foods,
-.birth-year {
-  font-size: 1rem;
+.card p {
+  font-size: 1.125rem;
 }
 
 .pet-pic {
@@ -67,7 +75,28 @@ body {
 img {
   height: 100%;
   width: 100%;
-  background: var(--camel);
+  background: var(--moss);
   border: 2px solid var(--black);
   border-radius: 20px;
+}
+
+@media only screen and (min-width: 700px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2.125rem;
+  }
+  .intro-text {
+    font-size: 1.25rem;
+    display: block;
+  }
+
+  .cat-name {
+    font-size: 1.75rem;
+  }
+  .card p {
+    font-size: 1.1875rem;
+  }
 }
