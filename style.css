@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Kalamfamily=Tangerine:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Kablammo&family&family=Kalamfamily=Tangerine:wght@700&display=swap");
 
 :root {
   --coral: #f05d5e;
   --teal: #0f7173;
   --light: #e7ecef;
+  --light-lime: #ecf8f2;
   --dark: #272932;
   --camel: #d8a47f;
   --burnt-camel: #744d25;
@@ -19,7 +20,52 @@ body {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  text-align: center;
   font-family: "Hedvig Letters Sans", sans-serif;
+  margin: 0;
+}
+.nav-links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 2px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark);
+  width: 100%;
+  padding: 1rem;
+  line-height: 1.4rem;
+  gap: 5px;
+}
+
+.nav-logo a {
+  color: var(--light);
+}
+
+.nav-links a {
+  color: var(--light);
+  padding: 10px;
+}
+
+.nav-links__item--change:hover {
+  box-shadow: 2px 2px 2px var(--teal);
+  transform: scaleY(1.1) scaleX(1.1);
+}
+
+.nav-logo--change:hover {
+  box-shadow: 2px 2px 2px var(--teal);
+  transform: scaleY(1.1) scaleX(1.1);
 }
 
 h1 {
@@ -28,7 +74,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.875rem;
+  /* font-size: 1.875rem; */
   font-family: "Tangerine", cursive;
 }
 
@@ -62,6 +108,8 @@ p {
   width: 100%;
   padding: 10px;
   margin: 10px;
+  background-color: #ecf8f2;
+  line-height: 1.2rem;
 }
 
 .cat-name {
@@ -87,15 +135,26 @@ img {
 }
 
 @media only screen and (min-width: 700px) {
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-right: 2rem;
+  }
   h1 {
     font-size: 2.5rem;
   }
 
-  h2 {
+  /* h2 {
     font-size: 2.125rem;
-  }
+  } */
   .intro-text {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     display: block;
   }
 
@@ -112,17 +171,20 @@ img {
     font-size: 3rem;
   }
 
-  h2 {
+  /* h2 {
     font-size: 2.5rem;
-  }
+  } */
 
   .intro-text {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
   .cat-name {
     font-size: 1.875rem;
   }
   .card p {
+    font-size: 1.25rem;
+  }
+  a {
     font-size: 1.25rem;
   }
 }
@@ -137,13 +199,16 @@ img {
   }
 
   .intro-text {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
-  .cat-name {
+  /* .cat-name {
     font-size: 1.875rem;
-  }
+  } */
   .card p {
     font-size: 1.25rem;
+  }
+  a {
+    font-size: 1.5rem;
   }
 }
 
